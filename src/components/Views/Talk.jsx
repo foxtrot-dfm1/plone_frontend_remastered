@@ -31,6 +31,7 @@ const TalkView = ({ content }) => {
             <Header dividing sub>
               When
             </Header>
+            <p>{content.room.title}</p>
             <When
               start={content.start}
               end={content.end}

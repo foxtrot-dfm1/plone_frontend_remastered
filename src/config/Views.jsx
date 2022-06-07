@@ -15,6 +15,8 @@ import AlbumView from '@plone/volto/components/theme/View/AlbumView';
 import Unauthorized from '@plone/volto/components/theme/Unauthorized/Unauthorized';
 import Forbidden from '@plone/volto/components/theme/Forbidden/Forbidden';
 
+import { TalkView, TalkListView } from '../components';
+
 const EventView = loadable(() =>
   import('@plone/volto/components/theme/View/EventView'),
 );
@@ -26,6 +28,7 @@ export const layoutViews = {
   listing_view: ListingView,
   link_redirect_view: LinkView,
   album_view: AlbumView,
+  talklist_view: TalkListView,
 };
 
 // Content Types View Registry
@@ -34,6 +37,7 @@ export const contentTypesViews = {
   File: FileView,
   Image: ImageView,
   Event: EventView,
+  talk: TalkView,
 };
 
 // Default view

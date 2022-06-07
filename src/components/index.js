@@ -7,6 +7,9 @@
  */
 import loadable from '@loadable/component';
 
+import TalkView from './Views/Talk';
+import TalkListView from './Views/TalkList';
+
 //  Do not lazy load them, since it has not much sense (they will live in the main chunk)
 // The App and View component are deliberatelly left out of this index.js file!
 // They should be used by Volto and only by Volto internally
@@ -194,3 +197,5 @@ export ToCSettingsSchema from '@plone/volto/components/manage/Blocks/ToC/Schema'
 export MaybeWrap from '@plone/volto/components/manage/MaybeWrap/MaybeWrap';
 
 export App from '@plone/volto/components/theme/App/App';
+
+export { TalkView, TalkListView };

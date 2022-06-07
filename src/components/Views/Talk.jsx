@@ -1,18 +1,10 @@
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import {
-  Container,
-  Divider,
-  Header,
-  Image,
-  Label,
-  Segment,
-} from 'semantic-ui-react';
-
+import { Container, Header, Image, Label, Segment } from 'semantic-ui-react';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 
-
-const TalkView = ({ content }) => {
+const TalkView = (props) => {
+  const { content } = props;
   const color_mapping = {
     Beginner: 'green',
     Advanced: 'yellow',
@@ -31,7 +23,6 @@ const TalkView = ({ content }) => {
             <Header dividing sub>
               When
             </Header>
-            <p>{content.room.title}</p>
             <When
               start={content.start}
               end={content.end}
@@ -41,35 +32,40 @@ const TalkView = ({ content }) => {
           </>
         )}
         {content.audience && (
-          <>
-            <Header dividing sub>
-              Audience
-            </Header>
-            <div>
-              {content.audience?.map((item) => {
-                let audience = item.title;
-                let color = color_mapping[audience] || 'green';
-                return (
-                  <Label key={audience} color={color} tag>
-                    {audience}
-                  </Label>
-                );
-              })}
-            </div>
-          </>
+          <Header dividing sub>
+            Audience
+          </Header>
         )}
+        {content.audience?.map(item => {
+          let audience = item.title || item.token;
+          let color = color_mapping[audience] || 'green';
+          return (
+            <Label key={audience} color={color}>
+              {audience}
+            </Label>
+          );
+        })}
       </Segment>
       {content.description && (
         <p className="documentDescription">{content.description}</p>
       )}
+      {content.audience?.map((item) => {
+        let audience = item.title || item.token;
+        let color = color_mapping[audience] || 'green';
+        return (
+          <Label key={audience} color={color}>
+            {audience}
+          </Label>
+        );
+      })}
       {content.details && (
         <div dangerouslySetInnerHTML={{ __html: content.details.data }} />
       )}
       <Segment clearing>
-        {content.speaker && <h3>{content.speaker}</h3>}
+        {content.speaker && <Header dividing>{content.speaker}</Header>}
         {content.website ? (
           <p>
-            <a href={content.website}>{content.company}</a>
+            <a href={content.website}>{content.company || content.website}</a>
           </p>
         ) : (
           <p>{content.company}</p>

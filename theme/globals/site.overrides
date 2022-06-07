@@ -1,0 +1,22 @@
+#main {
+    letter-spacing: .05em;
+}
+
+// Hide date fields from contributors
+body.userrole-contributor {
+  #default-start.field,
+  #default-end.field,
+  #default-whole_day.field,
+  #default-open_end.field {
+    display: none;
+  }
+}
+
+body.userrole-reviewer {
+  #default-start.field,
+  #default-end.field,
+  #default-whole_day.field,
+  #default-open_end.field {
+    display: block;
+  }
+}

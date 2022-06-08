@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@greenthumb/custom_faq": ["addons/custom_faq/src"]
+    },
+    "baseUrl": "src"
+  }
+}

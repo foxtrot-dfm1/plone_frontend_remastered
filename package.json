@@ -382,7 +382,8 @@
     "use-deep-compare-effect": "1.6.1",
     "xmlrpc": "1.3.2",
     "yarn-deduplicate": "3.1.0",
-    "yarnhook": "0.5.1"
+    "yarnhook": "0.5.1",
+    "volto-custom_faq": "1.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.22",
@@ -403,5 +404,13 @@
     "draft-js-block-breakout-plugin/immutable": "3.8.2",
     "draft-js-inline-toolbar-plugin/immutable": "3.8.2",
     "draft-js-plugins-editor/immutable": "3.8.2"
-  }
+  },
+  "private": true,
+  "workspaces": [
+     "src/addons/*"
+   ],
+  "addons": [
+    "volto-custom_faq",
+    "@eeacms/volto-blocks-form"
+   ]
 }

@@ -4,7 +4,8 @@ Frontend for plone6 training (https://training.plone.org/5/mastering-plone/index
 Includes all chapters up to 41.1, exclude 37,38,39
 ==========
 
-
+Also uses custom npm packege puplished on https://www.npmjs.com/package/volto-custom_faq
+==========
 
 # Volto
 <img align="right" width="300" alt="Volto png" src="./docs/logos/volto-colorful.png" />

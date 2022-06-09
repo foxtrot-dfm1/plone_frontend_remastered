@@ -380,10 +380,10 @@
     "svgo-loader": "2.2.1",
     "tlds": "1.203.1",
     "use-deep-compare-effect": "1.6.1",
+    "volto-custom_faq": "2.2.0",
     "xmlrpc": "1.3.2",
     "yarn-deduplicate": "3.1.0",
-    "yarnhook": "0.5.1",
-    "volto-custom_faq": "2.1.0"
+    "yarnhook": "0.5.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.22",
@@ -406,11 +406,8 @@
     "draft-js-plugins-editor/immutable": "3.8.2"
   },
   "private": true,
-  "workspaces": [
-     "src/addons/*"
-   ],
   "addons": [
     "volto-custom_faq",
     "@eeacms/volto-blocks-form"
-   ]
+  ]
 }

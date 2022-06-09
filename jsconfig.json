@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "volto-custom_faq": ["addons/volto-custom_faq/src"]
-    },
-    "baseUrl": "src"
-  }
-}

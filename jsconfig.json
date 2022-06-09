@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@greenthumb/custom_faq": ["addons/custom_faq/src"]
+      "volto-custom_faq": ["addons/volto-custom_faq/src"]
     },
     "baseUrl": "src"
   }

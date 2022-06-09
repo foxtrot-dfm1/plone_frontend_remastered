@@ -383,7 +383,7 @@
     "xmlrpc": "1.3.2",
     "yarn-deduplicate": "3.1.0",
     "yarnhook": "0.5.1",
-    "volto-custom_faq": "1.0.0"
+    "volto-custom_faq": "2.1.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.22",

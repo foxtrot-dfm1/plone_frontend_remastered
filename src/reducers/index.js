@@ -40,6 +40,8 @@ import lazyLibraries from '@plone/volto/reducers/lazyLibraries/lazyLibraries';
 import contextNavigation from '@plone/volto/reducers/contextNavigation/contextNavigation';
 import reduxAsyncConnect from './asyncConnect/asyncConnect';
 
+import votes from './votes/votes';
+
 /**
  * Root reducer.
  * @function
@@ -83,6 +85,7 @@ const reducers = {
   blocksClipboard,
   lazyLibraries,
   contextNavigation,
+  votes
 };
 
 export default reducers;

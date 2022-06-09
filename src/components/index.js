@@ -10,6 +10,7 @@ import loadable from '@loadable/component';
 import TalkView from './Views/Talk';
 import TalkListView from './Views/TalkList';
 import Sponsors from './Sponsors/Sponsors';
+import Voting from './Voting/Voting.jsx';
 
 //  Do not lazy load them, since it has not much sense (they will live in the main chunk)
 // The App and View component are deliberatelly left out of this index.js file!
@@ -199,4 +200,9 @@ export MaybeWrap from '@plone/volto/components/manage/MaybeWrap/MaybeWrap';
 
 export App from '@plone/volto/components/theme/App/App';
 
-export { TalkView, TalkListView, Sponsors };
+export {
+  TalkView,
+  TalkListView,
+  Sponsors,
+  Voting
+};
